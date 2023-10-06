@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a=[1,5,6,7,9];
+        b=[2,8,9,2,3];
+       let c=a.concat(b);
+       
+       d = [];
+        count = 0;
+        e = false;
+        for (i=0; i<c.length; i++) {
+            for(j=0; j<d.length; j++) {
+                if (c[i]==d[j]) {
+                e = true;}
+            }
+            count++;
+         if (count==1 && e==false) {
+            d.push(c[i]);
+         }   
+         e=false;
+         count=0;
+            }
+            d.sort();
+            document.write("Addition of 2 array:" + c + "<br>");
+            document.write("Sorted Array:" + d + "<br>");
+            if (d.length%2==0) {
+          x=d[(d.length/2)-1];
+          y=d[(d.length/2)]
+          document.write("Center Value: "+ x + "," + y);
+    }
+    else {
+        z=Math.floor(d.length/2);
+        w=d[z]
+         document.write("Center Value: "+ w);    
+    }
+             
+    </script>
+</body>
+</html>

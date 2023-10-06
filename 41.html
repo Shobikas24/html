@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a number: <input type="number" id="number"><br>
+    <button onclick="myfunction ()">Submit</button>
+    <script>
+      function myfunction () {
+        rows = 2;
+      var a = parseInt(document.getElementById("number").value);
+       char = "";
+for (let i = 1; i <= rows; i++) {
+
+    for (let k = 0; k < rows - i; k++) {
+    char += "&nbsp";
+  }
+ for (let j = 0; j<i; j++) {
+    char += a+j;
+  }
+  char += "<br>";
+}
+for (let i = rows-1; i>0; i--) {
+    for (let k = 0; k < rows - i; k++) {
+    char += "&nbsp";
+  }
+  for (let j = i-1; j>=0; j--) {
+    char += a+j;
+  }
+  char += "<br>";
+}
+document.write(char);
+      }
+    </script>
+</body>
+</html>

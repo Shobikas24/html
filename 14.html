@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a Word: <input type="text" id="word"><br>
+    <button onclick="myfunction ()">Submit</button>
+    <script>
+        function myfunction () {
+        var a=document.getElementById("word").value;
+        a=a.split('');
+        count=1;
+        for (i=0; i<a.length; i++) {
+                for (j=i+1; j<a.length; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                    a[j]='';
+                }
+            }
+            if (a[i] != '') {
+            document.write(a[i] + ":" + count + "<br>");
+            }
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         let a = ["1", "2", "3", "4", "2", "1"];
+        b = [];
+        count = 0;
+        c = false;
+        for (i=0; i<a.length; i++) {
+            for(j=0; j<b.length; j++) {
+                if (a[i]==b[j]) {
+                c = true;}
+            }
+            count++;
+         if (count==1 && c==false) {
+            b.push(a[i]);
+         }   
+         c=false;
+         count=0;
+            }
+            document.write(b);
+    </script>
+</body>
+</html>

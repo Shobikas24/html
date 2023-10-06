@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First Number: <input type="number" id="fnumber"><br>
+    Second Number: <input type="number" id="snumber"><br>
+    <button onclick="myfunction ()">Submit</button>
+    <Script>
+        function myfunction () {
+            a=parseInt(document.getElementById("fnumber").value);
+            b=parseInt(document.getElementById("snumber").value);
+            a=a+b;
+            b=a-b;
+            a=a-b;
+            document.write("First Number = "+ a + "<br>");
+            document.write("Second Number = "+ b);
+        }
+    </Script>
+</body>
+</html>

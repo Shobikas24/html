@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Amount: <input typr="number" id="amount"><br>
+    <button onclick="myfunction()">Submit</button>
+
+    <script>
+        function myfunction() {
+            amt = parseInt(document.getElementById("amount").value);
+            fh=0; th=0; oh=0; fy=0; ty=0; tn=0; f=0; t=0; o=0; 
+            fh = Math.floor(amt/500);
+            amt=amt-fh*500;
+            th = Math.floor(amt/200);
+            amt=amt-th*200;
+            oh = Math.floor(amt/100);
+            amt=amt-oh*100;
+            fy = Math.floor(amt/50);
+            amt=amt-fy*50;
+            ty = Math.floor(amt/20);
+            amt=amt-ty*20;
+            tn = Math.floor(amt/10);
+            amt=amt-tn*10;
+            f = Math.floor(amt/5);
+            amt=amt-f*5;
+            t = Math.floor(amt/2);
+            amt=amt-t*2;
+            o = Math.floor(amt/1);
+            amt=amt-o*1;
+
+            document.write("Total Number of Notes:" + "<br>")
+            document.write("500 X " + fh + "<br>");
+            document.write("200 X " + th + "<br>");
+            document.write("100 X " + oh + "<br>");
+            document.write("50 X " + fy + "<br>");
+            document.write("20 X " + ty + "<br>");
+            document.write("10 X " + tn + "<br>");
+            document.write("5 X " + f + "<br>");
+            document.write("2 X " + t + "<br>");
+            document.write("1 X " + o + "<br>");
+        }
+    </script>
+</body>
+</html>
